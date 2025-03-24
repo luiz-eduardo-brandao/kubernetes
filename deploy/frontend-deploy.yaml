@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testemvc
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: testemvc
+    spec:
+      containers:
+      - name: testemvc
+        image: luizeduardodev/testemvc
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+  selector:
+    matchLabels:
+      app: testemvc
