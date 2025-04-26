@@ -1,0 +1,19 @@
+# pod1.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aspnet-pod
+spec:
+  containers:
+    - name: aspn-container
+      image: luizeduardodev/pizzafrontend:latest
+      ports:
+        - containerPort: 80
+          name: "frontend-mvc"
+      volumeMounts:
+        - mountPath: "/app/meuvolume"
+          name: aspn-storage
+  volumes:
+    - name: aspn-storage
+      persistentVolumeClaim:
+        claimName: aspnet-pvc

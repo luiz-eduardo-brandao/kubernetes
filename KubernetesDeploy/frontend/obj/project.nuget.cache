@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mfSS79UivIg=",
+  "success": true,
+  "projectFilePath": "C:\\studies\\kubernetes\\KubernetesDeploy\\frontend\\frontend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luizb\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512"
+  ],
+  "logs": []
+}

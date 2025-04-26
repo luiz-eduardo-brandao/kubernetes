@@ -1,0 +1,17 @@
+# pvc1.yml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: aspnet-pvc
+  labels:
+    type: local-pvc
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Mi
+  selector:
+    matchLabels:
+      type: local-pv
